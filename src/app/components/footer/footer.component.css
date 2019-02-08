@@ -1,0 +1,33 @@
+a{color:#8dc0f6 !important}
+
+.labelText {
+	font-size: 20px;
+}
+
+hr {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 0;
+	border-top: 3px solid rgba(0, 0, 0, 0.21);
+}
+
+footer {
+	background-color: #04468d;
+	padding-top: 30px;
+  color: white;
+}
+
+footer h3 {
+	font-weight: 600;
+}
+
+.creator {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 1199px) and (min-width: 768px) {
+footer h3 {
+	font-size: 19px;
+}
+}

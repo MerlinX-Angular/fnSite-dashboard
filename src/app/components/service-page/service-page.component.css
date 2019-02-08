@@ -1,0 +1,151 @@
+.cont.pad {
+  padding:60px;
+  background-position: bottom;
+}
+
+.cont {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.cont {
+  height: 32rem;
+}
+.cont > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+}
+.cont-title {
+  text-align: center;
+  padding-top: 40px;
+  color:white;
+}
+.call {
+  margin-top: 60px;
+  background: none;
+  color: white;
+  padding: 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  text-align: center;
+}
+
+
+.section-why p {
+  text-align: justify;
+}
+.section-why h4, .section-why p {
+  margin-left: 96px;
+  margin-bottom: 20px;
+}
+.section-why {
+  overflow: hidden;
+  text-align: left;
+}
+
+@media  (min-width: 768px) and (max-width: 858px){
+  .col-md-5.col-md-pull-5 {
+    margin-top: 127px !important;
+  }
+  .girl {
+    max-height: 647px;
+  }
+}
+
+.floatLeft {
+  float:left;
+  margin-top: 30px;
+}
+.step-number {
+  width: 68px;
+  height: 68px;
+  background: #007bff;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
+  margin: auto;
+  float:left;
+}
+
+.step-number span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  bottom: auto;
+  right: auto;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.girl {
+  max-height: 560px;
+}
+.call h1 {
+  padding: 30px 0;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+  font-weight: 600 !important;
+}
+@media (min-width: 1200px) {
+  .girl{
+    max-height: 560px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+  .girl {
+    max-height: 598px;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 899px) {
+  .girl {
+    max-height: 620px;
+  }
+}
+
+@media (min-width:280px) and (max-width:576px){
+  .step-number {
+    width: 28px;
+    height: 28px;
+    background: #007bff;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    position: relative;
+    margin: auto;
+    float: left;
+  }
+  .section-why strong{
+    margin-left: 10px;
+  }
+  .section-why h4, .section-why p {
+    margin-left:0px;
+    margin-bottom: 20px;
+  }
+}
+
+@media  (max-width: 767px) {
+  .top-padding img {
+    display: none;
+  }
+  .cont.pad {
+    padding: 0px !important;
+  }
+}
+@media (min-width:767px) and (max-width:859px) {
+  .girl{
+    display:none;
+  }
+  .col-md-7 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}

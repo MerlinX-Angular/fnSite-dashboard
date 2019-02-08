@@ -1,0 +1,10 @@
+<br>
+<div class="input-group col-md-12">
+  <div class="custom-file">
+    <input type="file" style="display:none" (change)="selectFile($event)" id="inputGroupFile01" multiple aria-describedby="fileHelp" #inputFile>
+    <div *ngIf="this.fileCount === 0"><label class="custom-file-label" for="inputGroupFile01">Choose files</label></div>
+    <div *ngIf="this.fileCount != 0">   <label class="custom-file-label" for="inputGroupFile01">Selected ({{this.fileCount}} files)</label></div>
+  </div>
+</div>
+<br>
+<input type="submit"  class="btn btn-primary margin-bot"  [disabled]="!loads" value="Submit" (click)="uploadMulti()" (click)="this.dataBase.uploadRD()"/>

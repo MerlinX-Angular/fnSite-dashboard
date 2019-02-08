@@ -1,0 +1,172 @@
+.call {
+	margin-top: 60px;
+	background: none;
+	color: #fff;
+	padding: 30px 0;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+	text-align: center;
+}
+
+.call h1 {
+	padding:30px 0;
+	text-transform: uppercase;
+	letter-spacing: 8px;
+	font-weight: 600 !important;
+}
+
+.justified {
+	text-align: justify;
+}
+
+.col-md-4.call-btn {
+	padding: 40px;
+}
+
+.col-md-4.call-btn button{
+	font-size: 30px;
+}
+
+.top-space {
+	margin-top: 24px;
+}
+
+.margin-bottom {
+	margin-bottom: 20px
+}
+
+.margin-top {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.cont {
+	height: 32rem;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: bottom;
+}
+
+.center {
+	text-align: center;
+}
+
+.floatRight {
+	float:right;
+}
+
+.cont2 {
+	background-size: cover;
+	background-attachment: fixed;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding: 50px;
+}
+
+.client {
+	width:100%;
+	height: 100%;
+}
+
+.progress {
+	margin-bottom: 10px;
+}
+
+.info {
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding:20px;
+	font-size: 22px;
+	color:white;
+}
+
+.version2 {
+	font-size: 50px;
+}
+
+.cont.pad {
+	padding:60px;
+	background-position: bottom;
+}
+
+.container.sectors {
+	margin-bottom:20px;
+}
+.center .client-stats {
+	padding: 20px 30px;
+	font-size: 35px;
+	font-weight: 900;
+	letter-spacing: 5px;
+	color:white;
+}
+
+@-webkit-keyframes fadeInLeft {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+@keyframes fadeInLeft {
+	from {
+		opacity: 0;
+		-webkit-transform: translate3d(-100%, 0, 0);
+		transform: translate3d(-100%, 0, 0);
+	}
+
+	to {
+		opacity: 1;
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+}
+
+.fadeInLeft {
+	-webkit-animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
+}
+
+.animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 2s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+@media  (max-width: 450px){
+	.margin-bottom {
+		margin-bottom: .5rem;
+	}
+}
+
+@media  (max-width: 767px) {
+	.cont.pad {
+		padding: 0px !important;
+	}
+
+	.cont2 {
+		padding: 0 50px 0 50px;
+	}
+
+	.margin-top {
+		margin-top: 10px;
+	}
+}
+
+.img-padding {
+	margin-top: 10px;
+}
+
+@media  (min-width: 451px) and (max-width: 767px){
+	.margin-bottom {
+		margin-bottom: 8px;
+		margin-top: 10px;
+	}
+}

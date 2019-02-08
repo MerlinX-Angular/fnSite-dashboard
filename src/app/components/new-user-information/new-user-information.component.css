@@ -1,0 +1,48 @@
+body.sticky-footer .content-wrapper {
+  min-height: calc(100vh - 56px - 56px);
+}
+.content-wrapper {
+  min-height: calc(100vh - 56px);
+  padding-top: 1rem;
+}
+
+.content-wrapper {
+  overflow-x: hidden;
+  background: white;
+}
+
+.user-dashboard {
+	text-align: center;
+}
+.name {
+	padding: 30px 30px 0px 30px;
+}
+
+.name h3 {
+	font-weight: 600;
+  color:#007bff;
+}
+.name h4 {
+  	font-weight: 600;
+    color:red;
+}
+
+.floatLeft {
+  text-align: left;
+}
+.control-label {
+	margin-left: 20px;
+}
+
+.margin-l {
+  margin-left: 15px;
+}
+
+@media (min-width: 992px) {
+  body.sidenav-toggled .content-wrapper {
+    margin-left: 55px;
+  }
+  .content-wrapper {
+    margin-left: 250px;
+  }
+}

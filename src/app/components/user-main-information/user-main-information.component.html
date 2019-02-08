@@ -1,0 +1,105 @@
+<app-admin-panel-nav></app-admin-panel-nav>
+<div class="content-wrapper">
+  <div class="name">
+    <h3>Financial information</h3>
+    <hr>
+  </div>
+
+  <div class="user-dashboard">
+    <div class="container financial-box">
+      <h3>  Financial summary for {{this.monthCount}} months</h3>
+      <div class="row">
+        <div id="left" class="col-sm-4 col-md-4">
+          <div class='text-center'>
+            <div class="lowerPart">
+              <div class="number">Income:</div>
+              <div class="text">{{incomeSum}} EUR</div>
+            </div>
+          </div>
+        </div>
+        <div id="center" class="col-sm-4 col-md-4">
+          <div class='text-center'>
+            <div class="lowerPart">
+              <div class="number">Expenses:</div>
+              <div class="text">{{expensesSum}} EUR</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="right" class="col-sm-4 col-md-4">
+          <div class='text-center'>
+            <div class="lowerPart">
+              <div class="number">Difference:</div>
+              <div class="text">{{differenceInSums}} EUR</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 graph"*ngIf="chart">
+        <canvas #canvas id="myChart" width="400" height="400">{{ chart }}</canvas>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 col-sm-12 col-xs-12 gutter">
+        <h3 class='top-margin'>Users financial information by month</h3>
+        <table class="table table-striped">
+          <thead class="bg-color">
+            <tr>
+              <th scope="col">Month</th>
+              <th scope="col">Income</th>
+              <th scope="col">Expenses</th>
+              <th scope="col">Balance</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let userMS of userMonthStats">
+              <th scope="row">{{userMS?.$key}}</th>
+              <td>{{userMS?.income}}</td>
+              <td>{{userMS?.expenses}}</td>
+              <td>{{userMS?.income-userMS?.expenses}}</td>
+            </tr>
+            <tr>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="col-md-6">
+        <h3 class='top-margin'>Financial results</h3>
+        <table class="table text-left table-striped">
+          <thead class="bg-color">
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Total, EUR</th>
+              <th scope="col">Month</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Highest income:</th>
+              <td>{{highestIncome}}</td>
+              <td>{{this.highestIncomeMonth}} </td>
+            </tr>
+            <tr>
+              <th>Highest Expenses:</th>
+              <td>{{highestExpenses}}</td>
+              <td>{{this.highestExpenseMonth}} </td>
+            </tr>
+            <tr>
+              <th>Higest balance month:</th>
+              <td>{{highestBalance}}</td>
+              <td>{{this.highestBalanceMonth}} </td>
+            </tr> <tr>
+              <th>Lowest balance month:</th>
+              <td>{{lowestBalance}}</td>
+              <td>{{this.lowestBalanceMonth}} </td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>

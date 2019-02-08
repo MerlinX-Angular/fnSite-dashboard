@@ -1,0 +1,20 @@
+<app-admin-panel-nav></app-admin-panel-nav>
+<div class="content-wrapper">
+  <div class="name">
+    <h3>File upload</h3> <hr>
+  </div>
+  <div class="user-dashboard row">
+    <div class="col-md-8 col-sm-8 col-xs-8 gutter">
+      <ngx-flash-messages></ngx-flash-messages>
+      <app-upload-file></app-upload-file>
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-3 ">
+      <button class="btn btn-primary white-space "(click)="getDocuments()">View current months uploaded files</button>
+      <div class="top-marg" *ngFor="let doc of this.document; let i = index;">
+        {{i+1}}. {{doc.name}}
+        <button class="btn btn-primary pa" (click)="delete(doc.$key)">x</button><br>
+        <a target="_blank" [attr.href]="doc.url">View</a>
+      </div>
+    </div>
+  </div>
+</div>

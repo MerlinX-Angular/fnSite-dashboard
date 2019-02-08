@@ -1,0 +1,200 @@
+.size {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cont {
+  height: 32rem;
+}
+
+.slider-img {
+  background-image: url(/assets/slider.jpg);
+  background-repeat: no-repeat;
+  height: 1500px;
+  background-position: bottom;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@-webkit-keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInUpBig {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 2000px, 0);
+    transform: translate3d(0, 2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.cont > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+}
+.carousel-caption2 {
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+  padding-top: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.slider-slogan {
+  font-size: 60px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+
+.buttons a {
+  margin: 20px;
+  font-size: 30px;
+  margin-left: 30px !important;
+}
+
+@media  (max-width: 299px){
+  .slider-slogan{
+    font-size: 30px;
+    text-align: center;
+    margin-right: 20px;
+    font-weight: 700;
+  }
+  .fadeInUp{
+    animation-name: fadeInUp;
+    margin-bottom: ;
+    margin-left: -10px;
+  }
+  .buttons a {
+    margin: 10px;
+    font-size: 25px;
+    margin-left: 32px;
+  }
+}
+@media  (max-width: 450px) and (min-width:280px){
+  .call-btn {
+    text-align: center !important;
+    margin:0 !important;
+  }
+
+  .slider-slogan {
+    font-size: 36px !important;
+    text-align: center;
+    margin-right: 20px;
+    font-weight: 600;
+  }
+  .carousel-caption2 {
+    margin-bottom: -20px !important;
+  }
+  .fadeInUp {
+    margin-right: 26px;
+  }
+
+}
+@media (min-width:1400px){
+  .carousel-caption2 {
+    margin-left: -20px;
+  }
+}
+
+@media  (max-width: 608px) {
+  .carousel-caption2 {
+    margin-bottom: -10px;
+  }
+}
+
+@media  (max-width: 767px) and (min-width:451px){
+  .call-btn {
+    text-align: center !important;
+    margin:0 !important;
+
+  }
+  .slider-slogan {
+    font-size: 55px !important;
+    text-align: center;
+    margin-right: 20px;
+    font-weight: 600;
+  }
+
+  .fadeInUp {
+    margin-right: 15px;
+  }
+  .container {
+    max-width: 767px !important;
+  }
+}

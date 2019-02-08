@@ -1,0 +1,13 @@
+<app-admin-panel-nav></app-admin-panel-nav>
+<div class="content-wrapper">
+  <div class="name">
+    <button class="btn btn-primary floatRight" routerLink='/register'> New client</button>
+    <h3>User requests</h3>
+    <hr>
+  </div>
+  {{requests|json}}
+  <div class="user-dashboard"></div>
+  <div *ngFor="let notific of notification">
+    <a class="dropdown-item cur-pointer" (click)="user(notific[0])" (click)="this.dataBase.getUpKey(notific.$key)">{{notific[1]}}</a>
+  </div>
+</div>

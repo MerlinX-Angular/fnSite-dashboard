@@ -1,0 +1,34 @@
+<div class="container">
+  <form action="" method="post" class="">
+
+    <div class="col-md-3 form-element">
+      <input class="input-contact" name="name" #name size="40" placeholder="Name" ngModel #iV="ngModel"
+      type="text"  required>
+    </div>
+
+    <div class="col-md-3 form-element">
+      <input class="input-contact" name="surname" value="" #surname size="40" placeholder="Surname"
+      type="text" ngModel  #iP="ngModel" required>
+    </div>
+
+    <div class="col-md-3 form-element">
+      <input class="input-contact" name="phone" value="" #phone size="40" placeholder="Phone" type="text" ngModel  #iT="ngModel"
+      required>
+    </div>
+
+    <div class="col-md-3 form-element">
+      <input class="input-contact" name="email" value="" #email size="40" placeholder="Email" type="text" ngModel  #iE="ngModel"
+      required>
+    </div>
+
+    <div class="col-md-12 form-element">
+      <textarea name="message" cols="40" rows="10" class="text-area" #text placeholder="Message" ngModel #iZ="ngModel" required></textarea>
+    </div>
+
+    <input type="checkbox" name="checkB" class="checkB" ngModel #checkB="ngModel" (click)="enableSubmit(checkB.value)" ><div class="white" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since.</div><br>
+  </form>
+
+  <div class='center1'>
+    <button class="send" [disabled]="!iV.valid || !iP.valid || !iT.valid || !iE.valid || !iZ.valid || !this.check" (click)="sendForm(name.value,surname.value,phone.value,email.value,text.value)" (click)="name.value='';surname.value='';phone.value='';email.value='';text.value='';"> Send </button>
+  </div>
+</div>

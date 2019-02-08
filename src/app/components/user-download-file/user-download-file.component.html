@@ -1,0 +1,22 @@
+<app-admin-panel-nav></app-admin-panel-nav>
+<div class="content-wrapper">
+  <div class="name">
+    <h3 class='top-margin'>Requested files</h3>
+  </div>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">View/Download</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let document of userDocument | async">
+        <td>{{document?.name}}</td>
+        <td><a target="_blank" [attr.href]="document.url">View</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

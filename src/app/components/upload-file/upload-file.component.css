@@ -1,0 +1,8 @@
+/* browser zodziu panaikinimas */
+.custom-file-label::after {
+display:none;
+}
+
+.margin-bot {
+  margin-bottom: 20px;
+}

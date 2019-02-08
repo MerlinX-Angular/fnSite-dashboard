@@ -1,0 +1,137 @@
+body.sticky-footer .content-wrapper {
+  min-height: calc(100vh - 56px - 56px);
+}
+.content-wrapper {
+  min-height: calc(100vh - 56px);
+  padding-top: 1rem;
+}
+.content-wrapper {
+  overflow-x: hidden;
+  background-color: #f0f2f7 !important;
+}
+
+.name {
+  padding: 30px 30px 0px 30px;
+}
+
+.name h3 {
+  font-weight: 600;
+  color:#007bff;
+}
+#left {
+  float:left;
+  margin-bottom: 15px;
+}
+
+#center {
+  display: inline-block;
+  margin:0 auto;
+}
+
+#right {
+  float:right;
+
+}
+.container.financial-box h3 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.financial-box {
+  background-color: #10a1f0;
+  margin-bottom: 20px;
+  border-style: solid;
+  border: 10px solid #007bff;
+  border-radius: 20px;
+}
+.user-dashboard {
+  text-align: center;
+}
+
+.lowerPart {
+  padding: 25px;
+  transition: all ease .5s;
+  background: #0a57ab;
+  border-radius: 10px;
+  color:white;
+}
+
+.lowerPart:hover {
+  background: #0f70d8;
+  color: white;
+  transition: all ease .5s;
+}
+.lowerPart .number {
+  font-size: 28px;
+  margin-top: -3px;
+  font-weight: bold;
+}
+
+.text {
+  text-transform: uppercase;
+  font-size: bold;
+  letter-spacing: 0.5px;
+}
+
+.top-margin {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 21px;
+  font-weight: 700;
+}
+.bg-color {
+  background-color: #cccbcb !important;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+@media (min-width: 992px) {
+  body.sidenav-toggled .content-wrapper {
+    margin-left: 55px;
+  }
+  .content-wrapper {
+    margin-left: 250px;
+  }
+}
+
+@media (max-width:580px){
+  .table td, .table th {
+    padding: .5rem;
+  }
+  #left{
+    margin-bottom: 10px;
+  }
+
+  #center {
+    margin-bottom: 10px;
+  }
+  #right {
+    margin-bottom: 10px;
+    padding-left: ;
+  }
+}
+
+@media (max-width: 767px){
+  .graph{
+    display: none;
+  }
+  .top-margin {
+    margin-top: 0px;
+
+  }
+  .container {
+    max-width: 1000px;
+  }
+  .lowerPart .number {
+    font-size: 24px;
+  }
+  #left {
+    margin-left: 0px !important;
+  }
+}

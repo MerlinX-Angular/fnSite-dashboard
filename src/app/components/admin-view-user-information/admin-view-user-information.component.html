@@ -1,0 +1,70 @@
+<app-admin-panel-nav></app-admin-panel-nav>
+<div class="content-wrapper">
+  <div class="user-dashboard">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="userInfo row center">
+          <div class="col-md-3 col-sm-3 col-6">  Name:<br> <div class="fw-700"> {{this.compInfo?.userContacts?.name}} </div></div>
+          <div class="col-md-3 col-sm-3 col-6">  Email:<br> <div class="fw-700"> {{this.compInfo?.userContacts?.email}} </div></div><br>
+          <div class="col-md-3 col-sm-3 col-6">  Phone:<br> <div class="fw-700">  {{this.compInfo?.userContacts?.phone}} </div></div><br>
+          <div class="col-md-3 col-sm-3 col-6">  Address:<br> <div class="fw-700"> {{this.compInfo?.userContacts?.address}} </div></div>
+        </div>
+      </div>
+
+      <div class="col-md-4 top-text">
+        <h3>Uploaded files</h3>
+        {{this.timeY}} {{this.timeM}}
+        <div class="compInfo" *ngIf="compInfo?.stats">
+          <div *ngIf="compInfo?.stats[this.timeY][this.timeM]; else noInfo"> <i class="fas fa-check" style="color:green;"></i> </div>
+          <ng-template #noInfo> <i class="fas fa-times" style="color:red"></i> </ng-template>
+        </div>
+        <div *ngFor="let doc of this.monthDocs; let i = index">
+          {{i+1}}. {{doc.name}}
+          <a target="_blank" [attr.href]="doc.url">Review</a>
+        </div>
+      </div>
+
+      <div class="col-md-4 top-text">
+        <h3>Financial information</h3>
+        <div class="nm">
+          <div class="form-group">
+            <label class=" control-label">Month income</label>
+            <div class="col-md-12">
+              <input class="form-control"
+              type="number"
+              [(ngModel)]=income
+              name="income"
+              #monthIncome="ngModel"
+              number
+              pattern="^[0-9]+" required
+              />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class=" control-label">Month expenses</label>
+            <div class="col-md-12">
+              <input class="form-control"
+              type="number"
+              [(ngModel)]=expenses
+              name="expenses"
+              #monthExpenses="ngModel"
+              number pattern="^[0-9]+" required
+              />
+            </div>
+          </div>
+          <ngx-flash-messages></ngx-flash-messages>
+          <button  class="btn btn-primary mar" [disabled] = "!monthIncome.valid || !monthExpenses.valid" (click)="updateNew(income,expenses)">Save</button>
+        </div>
+      </div>
+      <div class="col-md-4 top-text">
+        <h3>File upload form</h3>
+        <app-upload-file></app-upload-file>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="btn-back">
+    <button class="btn btn-primary" routerLink="/request-review">Back</button>
+  </div>
+</div>

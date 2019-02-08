@@ -1,0 +1,14 @@
+<app-admin-panel-nav></app-admin-panel-nav>
+<div class="content-wrapper">
+  <div class="name">
+    <button  class="btn btn-primary floatRight" (click)="deleteMessage(this.info)"> Delete </button>
+    <h3>Message</h3>
+    <hr></div>
+    <div class="user-dashboard">
+      Name: {{this?.info[0]}} <br>
+      Surname: {{this?.info[1]}}  <br>
+      Phone: {{this?.info[2]}}  <br>
+      Email: {{this?.info[3]}}  <br>
+      Message: {{this?.info[4]}}  <br>
+    </div>
+  </div>
